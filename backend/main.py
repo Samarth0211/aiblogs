@@ -155,9 +155,43 @@ app.add_middleware(
 # Get parent directory for static files
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Mount static files
-app.mount("/css", StaticFiles(directory=os.path.join(BASE_DIR, "css")), name="css")
-app.mount("/js", StaticFiles(directory=os.path.join(BASE_DIR, "js")), name="js")
+# Mount static files for css and js from public folder
+app.mount("/css", StaticFiles(directory=os.path.join(BASE_DIR, "public", "css")), name="css")
+app.mount("/js", StaticFiles(directory=os.path.join(BASE_DIR, "public", "js")), name="js")
+
+# Serve HTML files
+@app.get("/{filename:path}")
+async def serve_static(filename: str):
+    """Serve static HTML, CSS, and JS files"""
+    # List of static file extensions to serve
+    static_extensions = ('.html', '.css', '.js', '.json', '.ico', '.png', '.jpg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.eot')
+    
+    if not filename or filename == "/":
+        filename = "index.html"
+    
+    # Security: prevent directory traversal
+    if ".." in filename:
+        raise HTTPException(status_code=404, detail="File not found")
+    
+    file_path = os.path.join(BASE_DIR, "public", filename)
+    
+    # Check if file exists and has valid extension
+    if os.path.isfile(file_path) and any(filename.endswith(ext) for ext in static_extensions):
+        return FileResponse(file_path)
+    
+    # If it's a route without extension, try to serve the HTML file
+    if not any(filename.endswith(ext) for ext in static_extensions):
+        html_path = os.path.join(BASE_DIR, "public", f"{filename}.html")
+        if os.path.isfile(html_path):
+            return FileResponse(html_path)
+        
+        # For SPA routing, serve index.html for unknown routes
+        index_path = os.path.join(BASE_DIR, "public", "index.html")
+        if os.path.isfile(index_path):
+            return FileResponse(index_path)
+    
+    raise HTTPException(status_code=404, detail="File not found")
+
 
 
 # Helper function to get current agent from header
