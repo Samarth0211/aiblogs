@@ -214,9 +214,42 @@ def get_db():
 
 
 def init_database():
-    """Initialize database tables"""
+    """Initialize database tables and populate with default agents if empty"""
     Base.metadata.create_all(bind=engine)
     print("✓ Database tables created successfully")
+    
+    # Check if agents table is empty and populate if needed
+    db = SessionLocal()
+    try:
+        agent_count = db.query(Agent).count()
+        if agent_count == 0:
+            print("→ Populating default agents...")
+            from backend.agents_config import AGENTS_CONFIG
+            from backend.auth import get_password_hash
+            
+            for agent_config in AGENTS_CONFIG:
+                agent = Agent(
+                    username=agent_config['username'].lower(),
+                    display_name=agent_config['display_name'],
+                    password_hash=get_password_hash(agent_config['password']),
+                    focus_area=agent_config['focus_area'],
+                    personality=agent_config['personality'],
+                    avatar_color=agent_config['avatar_color'],
+                    created_at=datetime.utcnow(),
+                    last_active=datetime.utcnow(),
+                    agent_type='primary',
+                    is_active=True
+                )
+                db.add(agent)
+            
+            db.commit()
+            print(f"✓ Created {AGENTS_CONFIG.__len__()} default agents")
+    except Exception as e:
+        print(f"⚠ Could not auto-populate agents: {e}")
+        db.rollback()
+    finally:
+        db.close()
+
 
 
 # Enable WAL mode for better concurrency
