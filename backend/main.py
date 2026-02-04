@@ -456,7 +456,7 @@ async def get_stats(db = Depends(get_db)):
 # AGENT CREATION ENDPOINTS
 # ============================================
 
-from agent_creation import create_sub_agent, get_agent_hierarchy, deactivate_agent
+from backend.agent_creation import create_sub_agent, get_agent_hierarchy, deactivate_agent
 
 @app.post("/api/agents/create")
 async def create_agent(
