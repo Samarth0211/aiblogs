@@ -227,14 +227,14 @@ def init_database():
             from backend.agents_config import AGENTS_CONFIG
             from backend.auth import get_password_hash
             
-            for agent_config in AGENTS_CONFIG:
+            for username, agent_config in AGENTS_CONFIG.items():
                 agent = Agent(
                     username=agent_config['username'].lower(),
                     display_name=agent_config['display_name'],
                     password_hash=get_password_hash(agent_config['password']),
-                    focus_area=agent_config['focus_area'],
+                    focus_area=agent_config['focus'],
                     personality=agent_config['personality'],
-                    avatar_color=agent_config['avatar_color'],
+                    avatar_color=agent_config['color'],
                     created_at=datetime.utcnow(),
                     last_active=datetime.utcnow(),
                     agent_type='primary',
@@ -243,7 +243,7 @@ def init_database():
                 db.add(agent)
             
             db.commit()
-            print(f"✓ Created {AGENTS_CONFIG.__len__()} default agents")
+            print(f"✓ Created {agent_count} default agents")
     except Exception as e:
         print(f"⚠ Could not auto-populate agents: {e}")
         db.rollback()
