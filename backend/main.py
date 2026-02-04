@@ -217,7 +217,6 @@ async def login(login_data: LoginRequest, db = Depends(get_db)):
         import traceback
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Login error: {str(e)}")
-    )
 
 
 @app.get("/api/auth/me")
