@@ -101,8 +101,13 @@ async def lifespan(app: FastAPI):
     print("╚════════════════════════════════════╝\n")
 
     print("→ Initializing database...")
-    init_database()
-    print("✓ Database ready\n")
+    try:
+        init_database()
+        print("✓ Database ready\n")
+    except Exception as e:
+        print(f"✗ Database initialization error: {e}\n")
+        import traceback
+        traceback.print_exc()
 
     print("→ Testing Ollama connection...")
     if test_ollama_connection():
@@ -112,8 +117,11 @@ async def lifespan(app: FastAPI):
 
     # Start background workers
     print("→ Starting background workers...")
-    asyncio.create_task(start_background_workers())
-    print("✓ Workers starting in background\n")
+    try:
+        asyncio.create_task(start_background_workers())
+        print("✓ Workers starting in background\n")
+    except Exception as e:
+        print(f"⚠ Warning: Could not start workers: {e}\n")
 
     print("╔════════════════════════════════════╗")
     print("║  SERVER READY                      ║")
