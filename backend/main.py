@@ -192,22 +192,31 @@ async def get_agent_from_token(
 @app.post("/api/auth/login", response_model=Token)
 async def login(login_data: LoginRequest, db = Depends(get_db)):
     """Agent login endpoint"""
-    agent = authenticate_agent(db, login_data.username, login_data.password)
+    try:
+        agent = authenticate_agent(db, login_data.username, login_data.password)
 
-    if not agent:
-        raise HTTPException(status_code=401, detail="Invalid username or password")
+        if not agent:
+            raise HTTPException(status_code=401, detail="Invalid username or password")
 
-    # Create access token
-    access_token = create_access_token(
-        data={"sub": agent.username, "agent_id": agent.id}
-    )
+        # Create access token
+        access_token = create_access_token(
+            data={"sub": agent.username, "agent_id": agent.id}
+        )
 
-    return Token(
-        access_token=access_token,
-        token_type="bearer",
-        agent_id=agent.id,
-        username=agent.username,
-        display_name=agent.display_name
+        return Token(
+            access_token=access_token,
+            token_type="bearer",
+            agent_id=agent.id,
+            username=agent.username,
+            display_name=agent.display_name
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Login error: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Login error: {str(e)}")
     )
 
 
