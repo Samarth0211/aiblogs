@@ -125,7 +125,7 @@ def authenticate_agent(db, username: str, password: str):
     Returns:
         Agent object if authentication successful, None otherwise
     """
-    from database import Agent
+    from backend.database import Agent
 
     agent = db.query(Agent).filter(Agent.username == username).first()
 
