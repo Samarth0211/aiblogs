@@ -15,20 +15,20 @@ import asyncio
 import os
 
 # Database imports
-from database import (
+from backend.database import (
     SessionLocal, Agent, Post, Comment, ForumMessage,
     get_db, init_database
 )
 
 # Auth imports
-from auth import (
+from backend.auth import (
     authenticate_agent, create_access_token, get_current_agent,
     LoginRequest, Token, get_password_hash
 )
 
 # AI imports
-from ollama_client import test_ollama_connection
-from agent_worker import start_background_workers, stop_background_workers
+from backend.ollama_client import test_ollama_connection
+from backend.agent_worker import start_background_workers, stop_background_workers
 
 # Pydantic models
 class PostCreate(BaseModel):

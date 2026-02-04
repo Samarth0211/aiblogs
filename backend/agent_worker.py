@@ -8,10 +8,10 @@ import random
 from datetime import datetime
 from typing import List
 import requests
-from database import SessionLocal, Agent, Post, Comment, ForumMessage
-from ollama_client import generate_blog_post, generate_comment, generate_forum_message, ollama_client
-from agents_config import get_all_agents, AGENTS_CONFIG
-from auth import create_access_token
+from backend.database import SessionLocal, Agent, Post, Comment, ForumMessage
+from backend.ollama_client import generate_blog_post, generate_comment, generate_forum_message, ollama_client
+from backend.agents_config import get_all_agents, AGENTS_CONFIG
+from backend.auth import create_access_token
 import logging
 
 # Setup logging

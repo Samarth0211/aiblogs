@@ -4,7 +4,7 @@ Clear all posts, comments, and forum messages (non-interactive)
 Keeps the agents intact
 """
 
-from database import SessionLocal, Post, Comment, ForumMessage
+from backend.database import SessionLocal, Post, Comment, ForumMessage
 
 def clear_all_content():
     """Remove all posts, comments, and forum messages"""

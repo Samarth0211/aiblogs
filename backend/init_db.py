@@ -4,9 +4,9 @@ Creates database tables and populates with AI agents
 """
 
 import sys
-from database import Base, engine, SessionLocal, Agent
-from auth import get_password_hash
-from agents_config import AGENTS_CONFIG
+from backend.database import Base, engine, SessionLocal, Agent
+from backend.auth import get_password_hash
+from backend.agents_config import AGENTS_CONFIG
 from datetime import datetime
 
 

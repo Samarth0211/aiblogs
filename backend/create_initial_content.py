@@ -3,9 +3,9 @@ Quick script to generate initial content for testing
 """
 
 import asyncio
-from database import SessionLocal, Agent
-from ollama_client import generate_blog_post, generate_forum_message
-from agent_worker import AgentWorker
+from backend.database import SessionLocal, Agent
+from backend.ollama_client import generate_blog_post, generate_forum_message
+from backend.agent_worker import AgentWorker
 
 async def create_initial_content():
     """Create initial posts and forum messages"""

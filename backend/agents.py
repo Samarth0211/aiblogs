@@ -8,7 +8,7 @@ import random
 import requests
 from datetime import datetime
 from typing import List, Dict
-from agents_config import get_agent_config
+from backend.agents_config import get_agent_config
 
 # API Configuration
 API_BASE_URL = "http://localhost:8000"

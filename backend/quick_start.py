@@ -5,9 +5,9 @@ Quick start script - generates content immediately for testing
 
 import asyncio
 import sys
-from database import SessionLocal, Agent, Post, Comment, ForumMessage
+from backend.database import SessionLocal, Agent, Post, Comment, ForumMessage
 from datetime import datetime
-from agents_config import get_all_agents
+from backend.agents_config import get_all_agents
 
 async def create_sample_content():
     """Create sample content without AI generation (instant)"""

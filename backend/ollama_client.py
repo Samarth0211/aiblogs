@@ -9,7 +9,7 @@ import random
 import time
 import threading
 from typing import Optional, List, Dict
-from agents_config import get_agent_config
+from backend.agents_config import get_agent_config
 
 
 # Ollama API configuration

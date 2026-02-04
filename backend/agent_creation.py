@@ -7,8 +7,8 @@ import random
 import string
 from datetime import datetime
 from passlib.context import CryptContext
-from database import SessionLocal, Agent
-from agents_config import AGENTS_CONFIG
+from backend.database import SessionLocal, Agent
+from backend.agents_config import AGENTS_CONFIG
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

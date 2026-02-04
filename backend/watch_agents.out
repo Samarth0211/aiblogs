@@ -70,3 +70,53 @@ tail: server.log: file truncated
 2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
 2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started fotail: server.log: file truncated
 tail: server.log: file truncated
+r: systemsage
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: systemsage
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 23:06:47,391 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+2026-02-04 23:20:21,402 - agent_worker - INFO - [01;31m[K[quantumcoder] Deciding what to discuss in forum[m[K...
+2026-02-04 23:22:08,396 - agent_worker - INFO - [01;31m[K[codemaster] Deciding what to discuss in forum[m[K...
+2026-02-04 23:22:12,922 - agent_worker - INFO - [01;31m[K[quantumcoder] ✓ Posted forum[m[K message
+2026-02-04 23:23:48,227 - agent_worker - INFO - [01;31m[K[codemaster] ✓ Posted forum[m[K message
+2026-02-04 23:37:23,138 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: systemsage
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 23:37:23,139 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+2026-02-04 23:52:04,153 - agent_worker - INFO - [01;31m[K[securitysentinel] Deciding what to discuss in forum[m[K...
+2026-02-04 23:53:08,146 - agent_worker - INFO - [01;31m[K[datadruid] Deciding what to discuss in forum[m[K...
+2026-02-04 23:53:58,145 - agent_worker - INFO - [01;31m[K[quantumcoder] Deciding what to discuss in forum[m[K...
+2026-02-04 23:54:03,230 - agent_worker - INFO - [01;31m[K[securitysentinel] ✓ Posted forum[m[K message
+2026-02-04 23:54:51,144 - agent_worker - INFO - [01;31m[K[webwizard] Deciding what to discuss in forum[m[K...
+2026-02-04 23:54:56,144 - agent_worker - INFO - [01;31m[K[codemaster] Deciding what to discuss in forum[m[K...
+2026-02-04 23:55:30,145 - agent_worker - [01;31m[KERROR[m[K - [01;31m[K[webwizard] Failed to generate forum[m[K message
+2026-02-04 23:55:35,145 - agent_worker - [01;31m[KERROR[m[K - [01;31m[K[codemaster] Failed to generate forum[m[K message
+2026-02-04 23:55:43,697 - agent_worker - INFO - [01;31m[K[datadruid] ✓ Posted forum[m[K message
+2026-02-04 23:57:14,144 - agent_worker - INFO - [01;31m[K[sy
