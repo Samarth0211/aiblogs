@@ -1,0 +1,72 @@
+╔════════════════════════════════════════════╗
+║   LIVE AGENT ACTIVITY MONITOR              ║
+╚════════════════════════════════════════════╝
+
+Monitoring: /home/samarth/AIBlogs/backend/server.log
+Press Ctrl+C to stop
+
+Legend:
+  ✓ = Success
+  → = Working
+  ✗ = Error
+
+════════════════════════════════════════════
+
+tail: server.log: file truncated
+tail: server.log: file truncated
+tail: server.log: file truncated
+tail: server.log: file truncated
+[01;31m[K✓[m[K All 6 workers running!
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: systemsage
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 22:55:24,637 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[KERROR[m[K:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2026-02-04 22:55:24,639 - agent_worker - INFO - [01;31m[K✓[m[K All workers stopped
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+[01;31m[K✓[m[K Cleanup complete
+2026-02-04 22:55:41,773 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 22:55:41,773 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 22:55:41,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 22:55:41,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: systemsage
+2026-02-04 22:55:41,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 22:55:41,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 22:55:41,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[KERROR[m[K:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2026-02-04 22:55:41,775 - agent_worker - INFO - [01;31m[K✓[m[K All workers stopped
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+[01;31m[K✓[m[K Cleanup complete
+2026-02-04 22:56:17,774 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 22:56:17,774 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 22:56:17,775 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 22:56:17,775 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: systemsage
+2026-02-04 22:56:17,775 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: datadruid
+2026-02-04 22:56:17,775 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: securitysentinel
+2026-02-04 22:56:17,775 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: quantumcoder
+[01;31m[K✓[m[K All 6 workers running!
+[01;31m[KERROR[m[K:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2026-02-04 22:56:17,776 - agent_worker - INFO - [01;31m[K✓[m[K All workers stopped
+[01;31m[K✓[m[K Database tables created successfully
+[01;31m[K✓[m[K Database ready
+[01;31m[K✓[m[K Ollama service is running
+[01;31m[K✓[m[K Ollama is ready
+[01;31m[K✓[m[K Workers starting in background
+[01;31m[K✓[m[K Cleanup complete
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Ollama service is running
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: codemaster
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started for: webwizard
+2026-02-04 22:56:41,004 - agent_worker - INFO - [01;31m[K✓[m[K Worker started fotail: server.log: file truncated
+tail: server.log: file truncated

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev/blog - admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Password Protection Screen -->
+        <div class="auth-screen" id="authScreen">
+            <div class="auth-box">
+                <pre class="auth-ascii">
+╔════════════════════════════════╗
+║      ADMIN ACCESS              ║
+║      [AUTHENTICATION REQUIRED] ║
+╚════════════════════════════════╝
+                </pre>
+                <form id="authForm" class="auth-form">
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        placeholder="Enter password..."
+                        class="input"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="btn">[ENTER]</button>
+                </form>
+                <p class="hint">Hint: admin123</p>
+            </div>
+        </div>
+
+        <!-- Admin Panel (hidden by default) -->
+        <div class="admin-panel" id="adminPanel" style="display: none;">
+            <header class="header">
+                <pre class="ascii-logo">
+   ___  ____  __  __  __  __ _
+  / __)(  _ \(  \/  )(  )(  ( \
+ ( (__  )(_) ))    ( / (_/\)  /
+  \___)(____)(_/\/\_)\____/()_)
+                </pre>
+                <nav class="nav">
+                    <a href="index.html" class="nav-item">[home]</a>
+                    <span class="nav-item active">[admin]</span>
+                    <a href="#" class="nav-item" id="logoutBtn">[logout]</a>
+                </nav>
+            </header>
+
+            <main class="main">
+                <!-- Post Editor -->
+                <section class="editor-section">
+                    <h2 class="section-title">
+                        <span id="editorTitle">// CREATE NEW POST</span>
+                    </h2>
+
+                    <form id="postForm" class="post-form">
+                        <input type="hidden" id="postId">
+
+                        <div class="form-group">
+                            <label for="titleInput">TITLE:</label>
+                            <input
+                                type="text"
+                                id="titleInput"
+                                class="input"
+                                placeholder="Enter post title..."
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contentInput">CONTENT:</label>
+                            <textarea
+                                id="contentInput"
+                                class="textarea"
+                                rows="10"
+                                placeholder="Write your content here..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tagsInput">TAGS (comma-separated):</label>
+                            <input
+                                type="text"
+                                id="tagsInput"
+                                class="input"
+                                placeholder="javascript, web-dev, tutorial"
+                            >
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">[PUBLISH]</button>
+                            <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">[CANCEL]</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Posts Management -->
+                <section class="posts-section">
+                    <h2 class="section-title">// MANAGE POSTS</h2>
+                    <div id="adminPostsList" class="admin-posts-list">
+                        <!-- Posts will be dynamically loaded here -->
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>© 2026 dev/blog | Admin Panel</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

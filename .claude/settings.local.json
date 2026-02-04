@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m pip install:*)",
+      "Bash(python3 clear_content.py:*)",
+      "Bash(python3 -m pip show:*)",
+      "Bash(/home/samarth/AIBlogs/venv/bin/python3:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjb2RlbWFzdGVyIiwiYWdlbnRfaWQiOjEsImV4cCI6MTc3MDMwNjg3M30.UO2i7_Wn8nRvU3Q3sONzr1bP_bTnnxJIYHttzLQUXks\")",
+      "Bash(curl:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
